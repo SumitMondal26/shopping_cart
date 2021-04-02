@@ -1,0 +1,111 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shopping cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="{% static 'home_page/style.css' %}" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col col-md-12 jumbotron">
+                <h1>Shopping</h1>
+            </div>
+        </div>
+
+        <div class="card card-body cart" id="cart">
+            <div class="card-title">product(s) in cart :
+                <span class="badge badge-info" id="total-products">0
+                </span>
+            </div>
+            <ul class="cart-list" id="cart-list">
+
+            </ul>
+            <div class="card-title total-price" style="display: inline">
+                total price : <span class="badge badge-info" id="total-price">" ₹ 0</span>
+            </div>
+            <div class="row btn-row mt-2">
+                <a class="btn btn-danger" id="empty-btn">empty</a>
+                <a class="btn btn-success">Checkout</a>
+            </div>
+        </div>
+
+        <div class="side-products">
+            suggested products
+            {% for data in data %}
+            {% if data.product_tag == "3" %}
+            <div class="side-product" id="{{ data.product_id }}">
+                <div class="card">
+                    <img class="card-img-top product-image" src="{{ data.product_image.url }}" alt="product img"
+                        loading="lazy" />
+                    <div class="card-body">
+                        <div class="card-title">
+                            <span class="product-name">{{ data.product_name}}</span>
+                            <div class="rs">
+                                rs
+                                <div class="product-price">{{ data.product_price}}</div>
+                            </div>
+                        </div>
+                        <div class="btn-container" id="btn-container">
+                            <button class="minus-btn"
+                                onclick="this.parentNode.querySelector('.product-quatity').stepDown()">
+                                -
+                            </button>
+                            <input class="product-quatity" style="width: 3rem; display: inline" type="number" value="1"
+                                min="1" readonly>
+                            <button class="plus-btn"
+                                onclick="this.parentNode.querySelector('.product-quatity').stepUp()">+</button>
+
+                            <a href="#" class="btn btn-primary add-button">cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endif %} {% endfor%}
+        </div>
+
+        <div class="products row">
+            {% for data in data %}
+            <div class="product" id="{{ data.product_id }}">
+                <div class="card">
+                    <img class="card-img-top product-image" src="{{data.product_image}}" alt="product img" />
+                    <div class="card-body">
+                        <div class="card-title">
+                            <span class="product-name">{{ data.product_name}}</span>
+                            <div style="display: inline; float: inline-end">
+                                ₹
+                                <div class="product-price">{{ data.product_price}}</div>
+                            </div>
+                        </div>
+                        <p class="card-text product-info"
+                            style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden">
+                            {{data.product_description}}
+                        </p>
+                        <div class="btn-container" id="btn-container">
+                            <button class="minus-btn"
+                                onclick="this.parentNode.querySelector('.product-quatity').stepDown()">
+                                -
+                            </button>
+                            <input class="product-quatity" style="width: 3rem; display: inline" type="number" value="1"
+                                min="1" readonly />
+                            <button class="plus-btn"
+                                onclick="this.parentNode.querySelector('.product-quatity').stepUp()">+</button>
+
+                            <a href="#" class="btn btn-primary add-button" id="{{data.product_tag}}">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor%}
+        </div>
+    </div>
+
+    <script src="{% static 'home_page/script.js'%}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</body>
+
+</html>
