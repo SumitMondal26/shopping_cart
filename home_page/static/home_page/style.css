@@ -44,6 +44,12 @@ body {
 .product-price {
 	display: inline;
 }
+.product-info {
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	overflow: hidden;
+}
 .product:hover {
 	transform: scale(1.05);
 	z-index: 1;

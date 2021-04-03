@@ -6,6 +6,13 @@
     <title>Shopping cart</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="{% static 'home_page/style.css' %}" />
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
+
 </head>
 
 <body>
@@ -33,20 +40,19 @@
             </div>
         </div>
 
-        <div class="side-products">
+        <div class="side-products" style="display: none;">
             suggested products
             {% for data in data %}
-            {% if data.product_tag == "3" %}
-            <div class="side-product" id="{{ data.product_id }}">
+            {% if data.product_tag == "1" %}
+            <div class="side-product" id="">
                 <div class="card">
-                    <img class="card-img-top product-image" src="{{ data.product_image.url }}" alt="product img"
-                        loading="lazy" />
+                    <img class="card-img-top product-image" src="" alt="product img" loading="lazy" />
                     <div class="card-body">
                         <div class="card-title">
-                            <span class="product-name">{{ data.product_name}}</span>
+                            <span class="product-name"></span>
                             <div class="rs">
-                                rs
-                                <div class="product-price">{{ data.product_price}}</div>
+                                ₹
+                                <div class="product-price"></div>
                             </div>
                         </div>
                         <div class="btn-container" id="btn-container">
@@ -80,8 +86,7 @@
                                 <div class="product-price">{{ data.product_price}}</div>
                             </div>
                         </div>
-                        <p class="card-text product-info"
-                            style="display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; overflow: hidden">
+                        <p class="card-text product-info">
                             {{data.product_description}}
                         </p>
                         <div class="btn-container" id="btn-container">
@@ -104,6 +109,8 @@
     </div>
 
     <script src="{% static 'home_page/script.js'%}"></script>
+    <script src="{% static 'home_page/script2.js'%}"></script>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </body>
