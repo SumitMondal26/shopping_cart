@@ -36,14 +36,13 @@
             </div>
             <div class="row btn-row mt-2">
                 <a class="btn btn-danger" id="empty-btn">empty</a>
-                <a class="btn btn-success">Checkout</a>
+                <a class="btn btn-success" style="background: rgb(1, 145, 1);">Checkout</a>
             </div>
         </div>
 
         <div class="side-products" style="display: none;">
             suggested products
-            {% for data in data %}
-            {% if data.product_tag == "1" %}
+
             <div class="side-product" id="">
                 <div class="card">
                     <img class="card-img-top product-image" src="" alt="product img" loading="lazy" />
@@ -70,7 +69,84 @@
                     </div>
                 </div>
             </div>
-            {% endif %} {% endfor%}
+            <div class="side-product" id="">
+                <div class="card">
+                    <img class="card-img-top product-image" src="" alt="product img" loading="lazy" />
+                    <div class="card-body">
+                        <div class="card-title">
+                            <span class="product-name"></span>
+                            <div class="rs">
+                                ₹
+                                <div class="product-price"></div>
+                            </div>
+                        </div>
+                        <div class="btn-container" id="btn-container">
+                            <button class="minus-btn"
+                                onclick="this.parentNode.querySelector('.product-quatity').stepDown()">
+                                -
+                            </button>
+                            <input class="product-quatity" style="width: 3rem; display: inline" type="number" value="1"
+                                min="1" readonly>
+                            <button class="plus-btn"
+                                onclick="this.parentNode.querySelector('.product-quatity').stepUp()">+</button>
+
+                            <a href="#" class="btn btn-primary add-button">cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side-product" id="">
+                <div class="card">
+                    <img class="card-img-top product-image" src="" alt="product img" loading="lazy" />
+                    <div class="card-body">
+                        <div class="card-title">
+                            <span class="product-name"></span>
+                            <div class="rs">
+                                ₹
+                                <div class="product-price"></div>
+                            </div>
+                        </div>
+                        <div class="btn-container" id="btn-container">
+                            <button class="minus-btn"
+                                onclick="this.parentNode.querySelector('.product-quatity').stepDown()">
+                                -
+                            </button>
+                            <input class="product-quatity" style="width: 3rem; display: inline" type="number" value="1"
+                                min="1" readonly>
+                            <button class="plus-btn"
+                                onclick="this.parentNode.querySelector('.product-quatity').stepUp()">+</button>
+
+                            <a href="#" class="btn btn-primary add-button">cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="side-product" id="">
+                <div class="card">
+                    <img class="card-img-top product-image" src="" alt="product img" loading="lazy" />
+                    <div class="card-body">
+                        <div class="card-title">
+                            <span class="product-name"></span>
+                            <div class="rs">
+                                ₹
+                                <div class="product-price"></div>
+                            </div>
+                        </div>
+                        <div class="btn-container" id="btn-container">
+                            <button class="minus-btn"
+                                onclick="this.parentNode.querySelector('.product-quatity').stepDown()">
+                                -
+                            </button>
+                            <input class="product-quatity" style="width: 3rem; display: inline" type="number" value="1"
+                                min="1" readonly>
+                            <button class="plus-btn"
+                                onclick="this.parentNode.querySelector('.product-quatity').stepUp()">+</button>
+
+                            <a href="#" class="btn btn-primary add-button">cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <div class="products row">

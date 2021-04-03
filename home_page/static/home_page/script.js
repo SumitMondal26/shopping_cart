@@ -36,7 +36,7 @@ window.addEventListener(
 			PProducts.push(new Products(product_id, product_name, product_img, product_price, product_tag));
 		}
 		function foo(tag) {
-			let count = 3;
+			let count = 4;
 			suggestedProducts = [];
 			for (let i = 0; i < PProducts.length; i++) {
 				const element = PProducts[i];
@@ -60,10 +60,6 @@ window.addEventListener(
 					element.querySelector(".product-image").src = suggested[i].product_img;
 					element.querySelector(".product-price").innerHTML = suggested[i].product_price;
 				}
-				else {
-					
-					products3[i].querySelector(".card").style.display="none";
-				}
 
 				// console.log(product_id, product_name, product_price);
 			}
@@ -76,7 +72,7 @@ window.addEventListener(
 				if (cart.style.display == "none") {
 					cart.style.display = "block";
 					side_products.style.display = "block";
-					side_products.style.left = "129vh";
+					side_products.style.left = "169vh";
 				}
 				let product_id = btn.parentElement.parentElement.parentElement.parentElement.id;
 
@@ -119,7 +115,7 @@ window.addEventListener(
 
 					for (let i = 0; i < cart_list.children.length; i++) {
 						let temp = cart_list.children[i].textContent.split((seperator = " "))[0];
-						console.log(temp);
+						//console.log(temp);
 						if ("#" + product_id == temp) {
 							cart_list.children[i].innerHTML =
 								"#" +
