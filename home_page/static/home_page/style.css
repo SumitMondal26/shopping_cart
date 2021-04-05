@@ -125,9 +125,10 @@ input[type="number"]::-webkit-outer-spin-button {
 	color: white;
 }
 .side-products .product-image {
-	width: 13.2rem;
+	width: 13.5rem;
 	height: auto;
 }
 .side-products .btn-container {
+	text-align: center;
 	height: 2rem;
 }
