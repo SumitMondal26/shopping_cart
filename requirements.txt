@@ -37,13 +37,7 @@ isort==4.3.21
 itsdangerous==1.1.0
 jedi==0.15.1
 Jinja2==2.10.3
-jsonschema==3.1.1
-jupyter-client==5.3.1
-jupyter-console==6.0.0
-jupyter-core==4.4.0
-jupyterlab-pygments==0.1.2
 lazy-object-proxy==1.4.3
-lxml==4.5.2
 MarkupSafe==1.1.1
 mccabe==0.6.1
 mistune==0.8.4
@@ -52,7 +46,6 @@ nbclient==0.5.1
 nbconvert==5.6.0
 nbformat==4.4.0
 nest-asyncio==1.5.1
-notebook==6.0.1
 numpy==1.17.4
 pandocfilters==1.4.2
 parso==0.5.1
@@ -76,16 +69,9 @@ pyrsistent==0.15.4
 pytest==3.3.0
 pytest-flask==0.11.0
 python-dateutil==2.8.0
-python-vlc==3.0.11115
-pytz==2019.3
-pywin32==300
-pywin32-ctypes==0.2.0
 pywinpty==0.5.7
 pyzmq==21.0.2
 qtconsole==4.5.5
-QtPy==1.9.0
-requests==2.22.0
-Send2Trash==1.5.0
 six==1.12.0
 soupsieve==1.9.5
 sqlparse==0.4.1
@@ -94,7 +80,6 @@ testpath==0.4.2
 text-unidecode==1.2
 tornado==6.0.3
 traitlets==4.3.3
-urllib3==1.25.7
 virtualenv==16.7.8
 wcwidth==0.1.7
 webencodings==0.5.1
