@@ -7,9 +7,6 @@
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
     <link rel="stylesheet" href="{% static 'home_page/style.css' %}" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.min.js"></script>
 
 </head>
 
@@ -121,7 +118,7 @@
             </div>
             <div class="side-product" id="">
                 <div class="card">
-                    <img class="card-img-top product-image" src="" alt="product img" loading="lazy" />
+                    <img class="card-img-top product-image" src="" width="216" alt="product img" loading="lazy" />
                     <div class="card-body">
                         <div class="card-title">
                             <span class="product-name"></span>
@@ -152,7 +149,8 @@
             {% for data in data %}
             <div class="product" id="{{ data.product_id }}">
                 <div class="card">
-                    <img class="card-img-top product-image" src="{{data.product_image.url}}" alt="product img" />
+                    <img class="card-img-top product-image" src="{{data.product_image.url}}" width="264" height="200"
+                        alt="product img" />
                     <div class="card-body">
                         <div class="card-title">
                             <span class="product-name">{{ data.product_name}}</span>
